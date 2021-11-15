@@ -1,0 +1,207 @@
+1) Growth & Transformation is intended for:
+- Customer
+
+2) G&T tagging of an opportunity happens in:
+- Customer Relationship Management System
+
+3) G&T Framework consists of: 
+- (a) 4 Value Themes   
+  (b) 48 Capabilities 
+  (d) 3 Governance Levels 
+
+4) Which one of the following Value Themes does the Capability 'Proof of Value demonstration' belong to?    
+- Value Discovery 
+
+5) G&T Guild Charter involves:
+- (b) Building organization-level repository of G&T assets
+  (c) Development of people capability on G&T
+
+6) Guild is best defined as a: 
+- Community of Practitioners 
+
+7) The G&T Guild portal is accessible to: 
+- Anyone in TCS with MS Teams access
+
+8) As a TCS associate, how can you be a part of customer’s G&T journey?
+- (a) Participate/Lead in Value Discovery
+  (b) Participate in proposal construct (Value Proposition)
+  (c) Be in the team to deliver G&T engagement and gain experience on business value delivery, IP and design-led solution, multi-services program, and perpetual innovation (Value Delivery)
+  (d) Network with customer executives for testimonial and shaping new opportunities
+
+9) Which of the following is/are example(s) of 'Growth play driven by thought leadership'?
+- (a) Radical business model transformation  
+  (c) Influence customer’s core business 
+
+10) Which of the following is an example of Changing Operating Model?
+- Enterprise Transformation
+
+11) Which one of the following is not a Value Theme?
+- Value Commitment
+
+12) Each G&T capability is listed under which of the following?
+- (b) One Value Theme  
+  (c) One Functional Area    
+
+13) G&T Guild consists of:
+- (a) Functional Communities  
+  (b) Governance Leads
+  (c) Program Team
+
+14) The mentors of each of the functional communities are typically:
+- Members of the Steerco
+
+15) Which one of these programs is directly focused on G&T capability development? 
+- Wings 3
+
+16) Which one of the following does the G&T Guild portal not contain?
+- List of all G&T engagements
+
+17) The research regarding a customer includes:
+- Both (a) and (b)
+
+18) Existing customers are unlikely to have G&T opportunities, hence we should focus primarily on new customers. 
+- False
+
+19) Architecting a solution for an identified potential business problem, includes:
+- A combination of two or more of the above
+
+20) Identifying potential skill, capability and competency requirements, is part of the role of the Solution Lead.
+- True
+
+21) Which among the following would be best suited to onboarding partners from the ecosystem during the shaping of the problem statement?
+- (a) ATU
+  (b) COIN™
+  (c) Unit CTO
+  (d) Innovation Champions/Evangelists
+
+22) Consultative Selling refers to:
+- A combination of (a) and (b)
+
+23) Which of the following units/teams are directly involved in providing market research data to accounts and units based on specific requests?
+- (b) Industry Advisory Groups
+  (c)  Corporate Market Research Team
+  (d) IRC
+
+24) The Consultative Selling process starts when: 
+- (b) A problem area is identified for an existing customer
+  (c) A problem area is identified for a new customer
+
+25) The Three Horizons of Purpose-led Growth are:
+- (a) Build digital core
+  (c) Transform and Grow around Purpose-led Ecosystem
+  (d) Innovate business models
+
+26) Our brand positioning focusses on:
+- (a) Partnering customers over the long term
+  (b) Leveraging its contextual knowledge
+  (d) Investments in research and innovation technology
+
+27) TCS PacePort™ is:
+- An Innovation Hub
+
+28) A solution delivery roadmap typically consists of:
+- (a) Milestones
+  (b) Deliverables
+  (c) Dependencies
+
+29) In a G&T engagement, which of the following are potential business values to the customer? 
+- (a) Revenue growth
+  (b) Productivity increase
+  (d) Increase in customer base
+
+30) To commit business value to the customer in the 'Value Proposition' cycle, which of the following should we consider?
+- (a) Customer’s past performance
+  (b) Market trend
+  (d) Industry benchmark data
+
+31) In a G&T engagement, the preferred contracting approach is: 
+- Outcome-based contracting
+
+32) Enterprise system for managing contract review workflow is:
+- CRS
+
+33) What are the key constructs of a G&T 'Value Proposition' objective? 
+- (a) Integrating the right set of products and capabilities in the solution
+  (b) Committing expected business value to the customer
+  (d) Arriving at a win-win contractual agreement with customer
+
+34) You are a Client Partner working on a proposal for an engagement where customer expects a 5% increase in their overall sales after the completion of the engagement. What will be your value commitment? 
+- Depends on TCS scope of work and ownership
+
+35) In a G&T engagement, the focus is on:
+- Both (a) and (b)
+
+36) Which of the following information is relevant at the start of a G&T engagement?
+- All of the above
+
+37) A G&T engagement provides an opportunity for the creation of IP. This statement is:
+- Most often true
+
+38) While discussing the onboarding of partners in a G&T engagement, we highlighted some terms. What were they?
+- (a) PacePort™
+  (d) COIN™
+
+39) During the ‘Value Delivery’ cycle of a G&T engagement, one customer stakeholder proposes a change in value commitment. As Program Head, what will be your stand?
+- (a) Analyze the cost-benefit, discuss with the customer and reach a mutually agreed decision
+
+40) The key discussion points during customer communication in a G&T engagement include:
+- (a) Delivery progress and its alignment to business value commitments
+  (b) Any change in business or engagement priority
+  (c) TCS’s points-of-view in the context of engagement 
+
+41) Why does the ‘Value Delivery' cycle in a G&T engagement need to adopt ‘Perpetual Transformation’?
+- (a) To ensure the relevance of business value commitments
+  (b) To capture the changes in business priorities and factor the same into solution design
+  (c) To drive perpetual improvements
+
+42) What are the key constructs of a G&T ‘Value Delivery’ objective?
+- (a) Excelling in customer mindshare
+  (b) Delivering business value
+  (c) Delivering an innovative solution
+  (d) Aligning to contractual commitments
+
+43) Why is engagement-specific upskilling a necessity? 
+- To address the skill gaps as per engagement’s skill requirements
+
+44) A typical G&T engagement in a 'Value Delivery' cycle requires strategy and execution practices to manage multi-services program, IP & Design-led development and partner ecosystem. 
+Is this statement true or false?
+- True
+
+45) In a G&T engagement, to continuously improve TCS’s brand positioning in the market, the team should focus on:
+- Both (a) and (b)
+
+46) Which among these are important reusable assets, generated by a G&T engagement?
+- All the above options are correct
+
+47) Which among these are important reusable assets, generated by a G&T engagement?
+- All the above options are correct
+
+48) You have completed an engagement. You want to publish the engagement case study as a G&T engagement. What do you need to ensure?
+- (a) The customer can be cited for reference
+  (b) The customer has agreed that this is a G&T engagement and has realized the expected benefits
+
+49) What are the channels that can be used to amplify G&T stories?
+- All the above options are correct
+
+50) In TCS, the experts who helped solve a specific problem for the customer, resulting in benefits for customer’s business, are identified as:  
+- Contextual Masters
+
+51) Which of the following amplification strategies can ensure top-of-the-mind recall and recognition of TCS Capabilities in the G&T space?
+- (c) Amplifying successful G&T stories, accompanied by customer testimonials explicitly highlighting the benefits delivered by TCS
+  (d) Showcasing third party reports, such as, by leading analysts/surveys, that project TCS as a capable G&T partner
+
+52) Which of the following are outcomes of Value Articulation in a G&T Engagement Cycle? 
+- G&T story amplification, Solution productization, Showcasing gained expertise
+
+53) How can we convince the customer to recognize us as a G&T Partner in their testimonials?
+- By regularly demonstrating to the customer how each engagement milestone has delivered the expected benefits and customer concurring
+
+
+
+
+
+
+
+
+
+
