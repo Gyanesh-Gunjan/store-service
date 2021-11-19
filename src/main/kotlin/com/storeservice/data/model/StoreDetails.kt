@@ -1,16 +1,18 @@
 package com.storeservice.data.model
 
-import java.util.*
-import javax.persistence.*
 
-@Entity
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
+
+import java.util.*
+
+@Document
 data class StoreDetails(
     @Id
-    var Id : Long,
+    var storeId : Long,
     var name: String,
     var status: String,
     var createdAt: Date,
     var updatedAt: Date,
-    @OneToMany(cascade = [CascadeType.ALL])
     var addressPeriod: List<AddressPeriod>
 )

@@ -1,0 +1,3 @@
+FROM openjdk:8
+EXPOSE 8100
+ADD
