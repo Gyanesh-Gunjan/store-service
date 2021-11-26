@@ -1,0 +1,29 @@
+# Created at 2021-11-24T15:23:37.959
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+
+# Created at 2021-11-24T15:23:40.307
+Unexpected IOException with stream: 2021-11-24 15:23:40.305  INFO [,,] 15542 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+
+
+# Created at 2021-11-24T15:23:41.489
+Unexpected IOException with stream: 2021-11-24 15:23:41.487  INFO [,,] 15542 --- [           main] c.A.s.StoreServiceApplicationTests       : Started StoreServiceApplicationTests in 13.899 seconds (JVM running for 15.345)
+
+
+# Created at 2021-11-24T15:23:41.586
+Unexpected IOException: 5,1,com.AlbertHeijn.storeservice.StoreServiceApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-11-24T15:23:42.057
+Unexpected IOException: 6,1,com.AlbertHeijn.storeservice.StoreServiceApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2021-11-24T15:23:42.059
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.AlbertHeijn.storeservice.StoreServiceApplicationTests,null,null,null
+
+
