@@ -15,16 +15,14 @@ class StoreServiceController(val storeService: StoreService) {
     @GetMapping("$STORES_DETAILS_END_POINT")
     fun findAllStoresDetails(
         @RequestParam(name = "refDate", required = false) refDate: String?,
-        @RequestParam(name="futureFlag", required = false) futureFlag: String? = "false"
-    ): MutableList<StoreDetails> {
+        @RequestParam(name="futureFlag", required = false) futureFlag: Int = 0
+    ): List<StoreDetails> {
 
-        println(refDate)
-        println(futureFlag)
         return storeService.getStoreDetails(refDate, futureFlag)
     }
 
     @GetMapping("$STORE_BY_ID_END_POINT")
-    fun findStoreById(@PathVariable storeId : String): Optional<StoreDetails> {
+    fun findStoreById(@PathVariable storeId : Long): Optional<StoreDetails> {
         return storeService.getStoreById(storeId)
     }
 

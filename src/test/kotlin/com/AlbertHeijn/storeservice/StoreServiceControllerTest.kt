@@ -42,11 +42,12 @@ class StoreServiceApplicationTest {
 
         val storeDetails = listOf<StoreDetails>(StoreDetails(1, "store 1", "Active", storeCreatedAt, storeUpdatedAt, addressPeriod))
 
-        Mockito.`when`(storeDetailsRepo.getStoreDetails(null, null)).thenReturn(storeDetails as MutableList<StoreDetails>?)
+        Mockito.`when`(storeDetailsRepo.getStoreDetails(null, 0)).thenReturn(storeDetails as List<StoreDetails>?)
 
         val requestBuilder: RequestBuilder = MockMvcRequestBuilders.get("/store-service/v1/stores")
 
         val result: MvcResult = mockBean.perform(requestBuilder).andReturn()
+        println(result)
         val expected = "[{'storeId':1, 'name': 'store 1', 'status': 'Active','createdAt':'$storeCreatedAt','updatedAt':'$storeUpdatedAt','addressPeriod':[{'dateValidFrom': '2021-01-01', 'dateValidUntil': '2022-01-01', 'storeAddress':{'street': 'a', 'houseNumber':1, 'houseNumberSuffix': 'b', 'postalCode':1, 'city': 'c', 'country': 'd'}}]}]"
         JSONAssert.assertEquals(expected, result.response.contentAsString, false)
     }
@@ -56,7 +57,7 @@ class StoreServiceApplicationTest {
 
         val storeDetails = Optional.ofNullable(StoreDetails(1, "store 1", "Active", storeCreatedAt, storeUpdatedAt, addressPeriod))
 
-        Mockito.`when`(storeDetailsRepo.getStoreById("1")).thenReturn(storeDetails)
+        Mockito.`when`(storeDetailsRepo.getStoreById(1)).thenReturn(storeDetails)
         val requestBuilder: RequestBuilder = MockMvcRequestBuilders.get("/store-service/v1/stores/1")
 
         val result: MvcResult = mockBean.perform(requestBuilder).andReturn()

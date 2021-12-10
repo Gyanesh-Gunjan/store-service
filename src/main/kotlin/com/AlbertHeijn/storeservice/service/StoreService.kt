@@ -2,50 +2,51 @@ package com.AlbertHeijn.storeservice.service
 
 import com.AlbertHeijn.storeservice.dao.StoreDetailsRepo
 import com.AlbertHeijn.storeservice.model.StoreDetails
-import com.fasterxml.jackson.databind.exc.MismatchedInputException
-import org.apache.catalina.Store
+import com.AlbertHeijn.storeservice.validation.convertDate
 import org.springframework.stereotype.Component
 import org.webjars.NotFoundException
-import java.lang.IllegalArgumentException
 import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Component
 class StoreService (val storeDetailsRepo: StoreDetailsRepo) {
 
-    fun getStoreDetails(refDate: String?, futureFlag: String?): MutableList<StoreDetails> {
-        val allStoresDetails : MutableList<StoreDetails>?
+/*
+*   return All stores records based on the given conditions (i.e. refDate and futureFlag)
+*   Default value of refDate is current Date and futureFlag = 0
+*   if futureFlag = 1 then it returns all future store records
+*   if futureFlag = 0 then it returns all current store records
+*   if futureFlag = -1 then it returns all past store records
+*
+*/
+    fun getStoreDetails(refDate: String?, futureFlag: Int): List<StoreDetails> {
+        val allStoresDetails = storeDetailsRepo
+                                .findAll()
+                                .ifEmpty { throw NotFoundException("Database has no records of any stores") }
 
-        if(refDate != null && futureFlag.equals("true",true)){
-            val dateConverted = convertDate(refDate)
-            allStoresDetails = storeDetailsRepo
-                .findByAddressPeriodDateValidFromLessThanAndAddressPeriodDateValidUntilNull(dateConverted)
-        }
-        else if(refDate != null && (futureFlag.equals("false", true) || futureFlag == null)){
-            val dateConverted = convertDate(refDate)
-            allStoresDetails = storeDetailsRepo
-                .findByAddressPeriodDateValidFromLessThan(dateConverted)
-        }
-        else allStoresDetails =  storeDetailsRepo.findAll()
 
-        if(allStoresDetails.isEmpty())
-            throw NotFoundException("Database has no records of any stores")
-        return allStoresDetails
+        val dateRef = convertDate(refDate)
+
+       return when (futureFlag) {
+            1 -> futureRecords(allStoresDetails, dateRef)
+            0 -> currentRecords(allStoresDetails, dateRef)
+            else -> pastRecords(allStoresDetails, dateRef)
+        }
+
     }
 
-    fun getStoreById(storeId : String): Optional<StoreDetails> {
-        val ID : Long?
-        try{
-             ID = storeId.toLong()
-        }
-        catch(e : Exception){
-            throw IllegalArgumentException("storeId type should be number.")
-        }
-        val storeDetails = storeDetailsRepo.findById(ID)
-        if(storeDetails.isEmpty)
-            throw NotFoundException("Database has no record of store with Id $ID")
-        return storeDetails
+
+/*
+*   return store details for the given storeId,
+*   If store with given storeId is not present then it will throw NotFoundException
+*
+*/
+    fun getStoreById(storeId: Long): Optional<StoreDetails> {
+
+        return storeDetailsRepo
+            .findById(storeId)
+            .isEmpty
+            .run { throw NotFoundException("Database has no record of store with Id $storeId") }
     }
 
 
@@ -53,15 +54,72 @@ class StoreService (val storeDetailsRepo: StoreDetailsRepo) {
         storeDetailsRepo.save(storeDetails)
     }
 
-    private fun convertDate(date : String): LocalDate? {
-        try {
-            val format = DateTimeFormatter.ofPattern("uuuu-MM-dd", Locale.ENGLISH)
-            val refDateConverted = (LocalDate.parse(date.toString(), format))
-            return refDateConverted
+/*
+*   return all current store records for which refDate lie between
+*   dateValidFrom and dateValidUntil of the AddressPeriod
+*   if no record found then It will throw NotFoundException
+*/
+    private fun currentRecords(
+        allStoresDetails: MutableList<StoreDetails>,
+        dateRef: LocalDate) : List<StoreDetails> {
+
+        allStoresDetails.forEach{ it1 ->
+            it1.addressPeriod =
+                it1.addressPeriod.filter{ it2 ->
+                    it2.dateValidFrom<= dateRef &&
+                            (it2.dateValidUntil == null ||  it2.dateValidUntil!! >= dateRef)
+                }
         }
-        catch(e : Exception) {
-            throw IllegalArgumentException("Reference Date (i.e. refDate) should be in YYYY-MM-DD format.")
+
+        return allStoresDetails
+            .filter { it1 -> it1.addressPeriod.isNotEmpty() }
+            .ifEmpty { throw NotFoundException("Database has no current Record with [ refDate - $dateRef ]") }
+
+
+    }
+
+/*
+*   return all current store records for which refDate is greater than
+*   dateValidFrom and dateValidUntil of the AddressPeriod
+*   if no record found then It will throw NotFoundException
+*/
+    private fun futureRecords(
+        allStoresDetails : MutableList<StoreDetails>,
+        dateRef: LocalDate) : List<StoreDetails> {
+
+        allStoresDetails.forEach{ it1 ->
+            it1.addressPeriod =
+                it1.addressPeriod.filter{ it2 ->
+                    it2.dateValidFrom > dateRef
+                }
         }
+
+        return allStoresDetails
+            .filter { it1 -> it1.addressPeriod.isNotEmpty() }
+            .ifEmpty{ throw NotFoundException("Database has no future Record with [ refDate - $dateRef ]") }
+    }
+
+
+/*
+*   return all current store records for which refDate less than
+*   dateValidFrom and dateValidUntil of the AddressPeriod
+*   if no record found then It will throw NotFoundException
+*/
+    private fun pastRecords(
+        allStoresDetails : MutableList<StoreDetails>,
+        dateRef: LocalDate) : List<StoreDetails> {
+
+        allStoresDetails.forEach{ it1 ->
+            it1.addressPeriod =
+                it1.addressPeriod.filter{ it2 ->
+                    it2.dateValidFrom < dateRef
+                }
+        }
+
+        return allStoresDetails
+            .filter { it1 -> it1.addressPeriod.isNotEmpty() }
+            .ifEmpty{ throw NotFoundException("Database has no past Record with [ refDate - $dateRef ]") }
+
     }
 
 }

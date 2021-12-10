@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 import java.util.*
 
-@Document
+@Document(collection="StoreDetails")
 data class StoreDetails(
     @Id
     var storeId: Long,

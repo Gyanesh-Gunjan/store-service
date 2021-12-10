@@ -9,5 +9,6 @@ import java.time.LocalDate
 @Repository
 interface StoreDetailsRepo : MongoRepository<StoreDetails, Long> {
     fun findByAddressPeriodDateValidFromLessThan(refDate: LocalDate?): MutableList<StoreDetails>
-    fun findByAddressPeriodDateValidFromLessThanAndAddressPeriodDateValidUntilNull(refDate: LocalDate?): MutableList<StoreDetails>
+    fun findByAddressPeriodDateValidFromLessThanAndAddressPeriodDateValidUntilNotNull(refDate: LocalDate?): MutableList<StoreDetails>
+//    fun findByAddressPeriodDateValidFromLessThanAndAddressPeriodDateValidUntilNull(refDate: LocalDate?): MutableList<StoreDetails>
 }
