@@ -1,20 +1,14 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'com.Albert-Heijn.store-service' is invalid and this project uses 'com.AlbertHeijn.storeservice' instead.
-
 # Getting Started
 
 ### Reference Documentation
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.0/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.0/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.0/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.6.0/reference/htmlsingle/#using-boot-devtools)
-* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/2.6.0/reference/htmlsingle/#production-ready)
-* [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/2.6.0/reference/htmlsingle/#boot-features-mongodb)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.6.3/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.6.3/maven-plugin/reference/html/#build-image)
+* [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#boot-features-developing-web-applications)
+* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#production-ready)
+* [Spring Data MongoDB](https://docs.spring.io/spring-boot/docs/2.6.3/reference/htmlsingle/#boot-features-mongodb)
 
 ### Guides
 The following guides illustrate how to use some features concretely:

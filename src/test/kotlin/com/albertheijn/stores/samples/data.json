@@ -1,0 +1,21 @@
+{
+  "storeId": 1001,
+  "name": "AH Van Baerlestraat ko",
+  "status": "active",
+  "createdAt": "2020-01-31T00:05:48.81",
+  "updatedAt": "2022-01-31T00:05:48.81",
+  "addressPeriod": [
+    {
+      "dateValidFrom": "2018-10-12",
+      "dateValidUntil": null,
+      "storeAddress": {
+        "street": "Van Baerlestraat",
+        "houseNumber": 33,
+        "houseNumberSuffix": "a",
+        "postalCode": 1071,
+        "city": "AP Amsterdam",
+        "country": "Netherlands"
+      }
+    }
+  ]
+}

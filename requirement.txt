@@ -1,3 +1,0 @@
-1. DB created   | Done
-2. Expose EndPoint | Done
-3. Create Docker file | pending
